@@ -36,7 +36,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define FORCE_NKRO
 
-//#define VIAL_TAP_DANCE_ENTRIES 6
+#define VIAL_TAP_DANCE_ENTRIES 4
+
+#define VIAL_COMBO_ENTRIES 4
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 3
 

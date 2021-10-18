@@ -2,7 +2,6 @@ VIA_ENABLE = yes
 VIAL_ENABLE = yes
 VIAL_INSECURE = yes
 LTO_ENABLE = yes
-COMBO_ENABLE = no
 
 MCU = atmega32u4
 F_CPU = 16000000

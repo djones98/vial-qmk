@@ -1,1 +1,3 @@
-MOUSEKEY_ENABLE = yes       # Mouse keys
+BOOTLOADER = caterina
+
+MOUSEKEY_ENABLE = no       # Mouse keys
