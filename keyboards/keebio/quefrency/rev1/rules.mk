@@ -1,3 +1,3 @@
 BOOTLOADER = caterina
 
-MOUSEKEY_ENABLE = yes       # Mouse keys
+MOUSEKEY_ENABLE = no       # Mouse keys
