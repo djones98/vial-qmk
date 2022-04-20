@@ -22,9 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define DIODE_DIRECTION COL2ROW
 
-#define DEBOUNCE 3
+#define DEBOUNCE 4
 
 
-// Set 65% column (option 1) and Macro (option 2) on by default
-#define VIA_EEPROM_LAYOUT_OPTIONS_DEFAULT 0x60
+
 
