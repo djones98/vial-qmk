@@ -21,12 +21,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* Use I2C or Serial, not both */
-
-//#define USE_SERIAL
 #define USE_I2C
 
-
+#define VIAL_KEYBOARD_UID {0x49, 0x2B, 0xD0, 0x33, 0xA5, 0x63, 0xEF, 0xD6}
 
 #define USB_POLLING_INTERVAL_MS 1
 
@@ -36,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define FORCE_NKRO
 
-
+#define DYNAMIC_KEYMAP_LAYER_COUNT 3
 
 
 
