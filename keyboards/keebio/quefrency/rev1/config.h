@@ -21,9 +21,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPLIT_HAND_PIN D2
 
 #define DIODE_DIRECTION COL2ROW
-
-#define DEBOUNCE 4
-
-
-
-
