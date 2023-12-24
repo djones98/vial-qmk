@@ -35,3 +35,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define FORCE_NKRO
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 3
+
+#define VIAL_TAP_DANCE_ENTRIES 4
+
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
+#define NO_MUSIC_MODE
