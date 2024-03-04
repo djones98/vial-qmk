@@ -44,7 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 uint8_t    animation_counter       = 0; // global animation counter.
 bool       is_calm                 = false;
 uint32_t   starry_night_anim_timer = 0;
-uint32_t   starry_night_anim_sleep = 0;
+//uint32_t   starry_night_anim_sleep = 0;
 static int current_wpm             = 0;
 
 static uint8_t increment_counter(uint8_t counter, uint8_t max) {
@@ -511,12 +511,22 @@ static void animate_shooting_stars(void) {
 }
 #endif // endregion
 
+
+
 /**
  * Main rendering function
  *
  * Calls all different animations at different rates
  */
 void render_stars(void) {
+
+    if (last_input_activity_elapsed() > OLED_TIMEOUT && last_led_activity_elapsed() > OLED_TIMEOUT) {
+        oled_off();
+        return;
+    } else {
+        oled_on();
+    }
+
     //    // animation timer
     if (timer_elapsed32(starry_night_anim_timer) > STARRY_NIGHT_ANIM_FRAME_DURATION) {
         starry_night_anim_timer = timer_read32();
@@ -560,11 +570,13 @@ void render_stars(void) {
         animation_counter = increment_counter(animation_counter, NUMBER_OF_FRAMES);
     }
 
+
+
     // this fixes the screen on and off bug
-    if (current_wpm > 0) {
+    /*if (current_wpm > 0) {
         oled_on();
         starry_night_anim_sleep = timer_read32();
     } else if (timer_elapsed32(starry_night_anim_sleep) > OLED_TIMEOUT) {
         oled_off();
-    }
+    }*/
 }

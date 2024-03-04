@@ -439,12 +439,12 @@ static void render_layer(void) {
         oled_write_P(PSTR("WIN\n"), layer_state_is(_QWERTY));
     }
 
-    oled_write_P(PSTR("LOWER"), layer_state_is(_LOWER) && !layer_state_is(_ADJUST));
-    oled_write_P(PSTR("RAISE"), layer_state_is(_RAISE) && !layer_state_is(_ADJUST));
+    oled_write_P(PSTR("SYM\n"), layer_state_is(_LOWER) && !layer_state_is(_ADJUST));
+    oled_write_P(PSTR("FKEYS"), layer_state_is(_RAISE) && !layer_state_is(_ADJUST));
     if (IS_LAYER_ON(_MO5)) {
         oled_write_P(PSTR("MO5\n"), layer_state_is(_MO5) && !layer_state_is(_LOWER) && !layer_state_is(_RAISE) && !layer_state_is(_ADJUST));
     } else {
-        oled_write_P(PSTR("ADJUST"), layer_state_is(_ADJUST));
+        oled_write_P(PSTR("OTHER"), layer_state_is(_ADJUST));
     }
 }
 #    endif
