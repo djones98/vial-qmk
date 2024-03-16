@@ -23,7 +23,7 @@
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-#define OLED_FONT_H "keyboards/keycapsss/kimiko/keymaps/rgb_matrix/glcdfont.c"
+#define OLED_FONT_H "keyboards/keycapsss/kimiko/keymaps/oriaj3/glcdfont.c"
 // #define OLED_FONT_WIDTH 5
 // #define OLED_FONT_HEIGHT 7
 
@@ -31,7 +31,7 @@
 #ifdef RGB_MATRIX_ENABLE
 
 // The pin connected to the data pin of the LEDs
-#define RGB_DI_PIN D3
+#define WS2812_DI_PIN D3
 // The number of LEDs connected
 #define RGB_MATRIX_LED_COUNT 60
 #define RGBLED_NUM 60
