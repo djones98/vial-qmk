@@ -1,7 +1,4 @@
 {
-    "name": "mtchoc",
-    "vendorId": "0xECED",
-    "productId": "0x3 8663",
     "lighting": "none",
     "matrix": { "rows": 5, "cols": 14 },
     "layouts": {

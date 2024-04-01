@@ -11,20 +11,17 @@ void keyboard_post_init_kb(void) {
     lcd = qp_gc9a01_make_spi_device(LCD_HEIGHT, LCD_WIDTH, LCD_CS_PIN, LCD_DC_PIN, LCD_RST_PIN, LCD_SPI_DIVISOR, SPI_MODE);
 
     qp_init(lcd, LCD_ROTATION);
-
-    // Display offset
     qp_set_viewport_offsets(lcd, LCD_OFFSET_X, LCD_OFFSET_Y);
-
-    // Power on display,
     qp_power(lcd, 1);
-    // Paint catpaste/Katten Paste
+
     painter_image_handle_t logo_image = qp_load_image_mem(gfx_cat);
     qp_drawimage(lcd, 0, 0, logo_image);
     qp_flush(lcd);
-
     keyboard_post_init_user();
 }
 
+
+//MODIFIED FROM CODE FOUND ON REDDIT
 // Backlight timeout feature
 static uint16_t idle_timer          = 0;
 static bool     lcd_on              = true;
@@ -41,6 +38,7 @@ void matrix_scan_user(void) {
         backlight_set(0);
         qp_power(lcd, false);
         lcd_on = false;
+        qp_flush(lcd);
     }
 };
 

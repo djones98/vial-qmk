@@ -6,7 +6,6 @@
         "pin": "GP25"
     },
     "bootloader": "rp2040",
-    "debounce": 3,
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
@@ -26,8 +25,8 @@
     "url": "",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0000",
-        "vid": "0xFEED"
+        "pid": "0x1234",
+        "vid": "0xDEED"
     },
     "layouts": {
         "LAYOUT": {
