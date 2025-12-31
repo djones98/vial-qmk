@@ -1,23 +1,11 @@
 #pragma once
 
-#include "config_common.h"
-
-
 #define DEBOUNCE 5
-
-#define MATRIX_ROWS 5
-#define MATRIX_COLS 15
-
-#define MATRIX_ROW_PINS {A1, A2, A3, A5, A4}
-#define MATRIX_COL_PINS {B4, C4, C5, B1, A7, C9, B2, B10, B12, B13, B14, B15, C6, C7, C8}
 
 #undef LED_ON_HIGH
 #define LED_ON_HIGH 0
 #define LED_PIN_ON_STATE 0
 
-#define SOLENOID_PIN A8
-#define SOLENOID_ACTIVE true
-#define SOLENOID_DEFAULT_DWELL 20
 #undef STM32_HSECLK
 #define STM32_HSECLK 16000000
 
@@ -32,4 +20,3 @@
 #define WEAR_LEVELING_BACKING_SIZE (WEAR_LEVELING_LOGICAL_SIZE * 2)
 #undef STM32_HSECLK
 #define STM32_HSECLK 16000000
-
