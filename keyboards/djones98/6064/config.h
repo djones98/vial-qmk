@@ -1,11 +1,5 @@
 #pragma once
 
-#define DEBOUNCE 5
-
-#undef LED_ON_HIGH
-#define LED_ON_HIGH 0
-#define LED_PIN_ON_STATE 0
-
 #undef STM32_HSECLK
 #define STM32_HSECLK 16000000
 

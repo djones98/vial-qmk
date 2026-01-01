@@ -1,24 +1,38 @@
 {
   "manufacturer": "DK",
   "keyboard_name": "DK 6064",
-  "maintainer": "skullydazed",
+  "maintainer": "Daz",
+  "board": "GENERIC_STM32_F401XC",
   "processor": "STM32F401",
   "bootloader": "tinyuf2",
   "diode_direction": "COL2ROW",
+  "debounce": 2,
+  "polling_interval": 1,
   "features": {
     "bootmagic": true,
     "extrakey": true,
     "mousekey": true,
-    "nkro": true
+    "nkro": true,
+    "uartenable": true,
+    "console": false,
+    "rgblight": false,
+    "commandenable":false
   },
   "indicators": {
-    "caps_lock": "B5"
+    "caps_lock": "B5",
+    "on_state ": 0
+  },
+  "host": {
+    "default": {
+      "nkro": true
+    }
   },
   "matrix_pins": {
     "rows": ["A1", "A2", "A3", "A5", "A4"],
     "cols": ["B4", "C4", "C5", "B1", "A7", "C9", "B2", "B10", "B12", "B13", "B14", "B15", "C6", "C7", "C8"]
   },
   "ws2812": {
+    "driver": "pwm",
     "pin": "D7"
   },
   "usb": {
