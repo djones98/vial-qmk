@@ -1,7 +1,4 @@
 {
-    "name": "FancyAlice66",
-    "vendorId": "0xECED",
-    "productId": "0x3663",
     "lighting": "vialrgb",
     "matrix": { "rows": 5, "cols": 16 },
     "layouts": {

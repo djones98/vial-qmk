@@ -1,4 +1,4 @@
-/* Copyright 2023 Adophoxia <https://github.com/Adophoxia>
+/* Copyright 2022 JasonRen(biu)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,16 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "quantum.h"
+#pragma once
+#include_next <halconf.h>
 
-#ifdef RGB_MATRIX_ENABLE
-bool rgb_matrix_indicators_kb(void) {
-    if (!rgb_matrix_indicators_user()) {
-        return false;
-    }
-    if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(43, 0xFF, 0xFF, 0xFF);
-    }
-    return true;
-}
-#endif
+#undef HAL_USE_PWM
+#define HAL_USE_PWM    TRUE

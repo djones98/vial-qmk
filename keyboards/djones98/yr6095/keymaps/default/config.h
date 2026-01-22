@@ -1,0 +1,9 @@
+#define VIAL_KEYBOARD_UID {0x4D, 0x7A, 0x2B, 0xF0, 0xF6, 0x04, 0x57, 0x3F}
+
+#define RGBLIGHT_DEFAULT_ON 0
+
+#define NKRO_DEFAULT_ON true
+
+/* #define QMK_KEYS_PER_SCAN 12 */
+
+#define DEBUG_MATRIX_SCAN_RATE

@@ -1,4 +1,4 @@
-/* Copyright 2023 Adophoxia <https://github.com/Adophoxia>
+/* Copyright 2022 JasonRen(biu)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,16 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "quantum.h"
+#pragma once
 
-#ifdef RGB_MATRIX_ENABLE
-bool rgb_matrix_indicators_kb(void) {
-    if (!rgb_matrix_indicators_user()) {
-        return false;
-    }
-    if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(43, 0xFF, 0xFF, 0xFF);
-    }
-    return true;
-}
-#endif
+#include_next <mcuconf.h>
+
+#undef STM32_PWM_USE_TIM3
+#define STM32_PWM_USE_TIM3 TRUE
+
+#undef  STM32_PLLXTPRE
+#define STM32_PLLXTPRE STM32_PLLXTPRE_DIV2
