@@ -1,2 +1,7 @@
 
 #define VIAL_KEYBOARD_UID {0x54, 0xF8, 0x27, 0x15, 0x2B, 0x66, 0x3A, 0xC0}
+
+#define FORCE_AUTO_SHIFT_ENABLE 1
+#define FORCE_NKRO
+#define QMK_KEYS_PER_SCAN 12
+

@@ -2,3 +2,4 @@ VIA_ENABLE = yes
 VIAL_ENABLE = yes
 VIAL_INSECURE = yes
 
+DEBOUNCE_TYPE = sym_defer_pk
